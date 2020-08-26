@@ -1,0 +1,13 @@
+#!/bin/csh
+#BSUB -n 12
+##BSUB -q santiso
+#BSUB -o o.%J
+#BSUB -e e.%J
+#BSUB -R "rusage[mem=20GB]  span[ptile=4]"
+##BSUB -R "select[qc || hc || oc] span[ptile=12]"
+#BSUB -u xwang99@ncsu.edu
+#BSUB -W 5760
+#BSUB -J CMNEB
+
+mpirun -np 12 SISSO >log
+

@@ -1,0 +1,107 @@
+Version SISSO.3.0.2, June, 2020.
+================================================================================
+
+Reading data from train.dat ...
+Reading parameters from SISSO.in: 
+--------------------------------------------------------------------------------
+Restarts :     F
+Descriptor dimension:        2
+Property type:     1
+Total number of properties:        1
+Task_weighting:        1
+Number of samples for each property:     7675
+Number of scalar features:       12
+Number of recursive calls for feature transformation (rung of the feature space):        3
+Max feature complexity (number of operators in a feature):       10
+Number of dimension(unit)-type (for dimension analysis):        2
+Dimension type for each primary feature: 
+  1.00  0.00
+  1.00  0.00
+  1.00  0.00
+  1.00  0.00
+  1.00  0.00
+  1.00  0.00
+  0.00  1.00
+  0.00  1.00
+  0.00  1.00
+  0.00  1.00
+  0.00  1.00
+  0.00  1.00
+Lower bound of the max abs. data value for the selected features:     0.10000E-02
+Upper bound of the max abs. data value for the selected features:     0.10000E+06
+Size of the SIS-selected (single) subspace :       20      20
+Operators for feature construction: (+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(log) (+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(log) (+)(-)(*)(/)(exp)(exp-)(^-1)(^2)(^3)(sqrt)(log) 
+Method for sparsification:  L0        
+Number of the top ranked models to output:      100
+Fitting intercept?      T
+Metric for model selection: RMSE
+--------------------------------------------------------------------------------
+
+Feature Construction and Descriptor Identification (FCDI) starts ...
+
+iteration:   1
+--------------------------------------------------------------------------------
+FC starts ...
+Standard Deviation (SD) of property 001:    0.16959
+Total number of features in the space phi00:             12
+Total number of features in the space phi01:            291
+Total number of features in the space phi02:          63866
+Total number of features in the space phi03:     4666439663
+Size of the SIS-selected subspace from phi03:         20
+Wall-clock time (second) for this FC:        38418.39
+FC done!
+
+DI starts ...
+total number of SIS-selected features from all iterations:         20
+L0 starts ...
+
+Model/descriptor for generating residual:
+================================================================================
+  1D descriptor (model): 
+Total RMSE,MaxAE:   0.048967  0.300771
+@@@descriptor: 
+                      1:[(((f1)^2-(f5*f6))/((f2+f3)-f6))]
+       coefficients_001:    -0.3693542734E-03
+          Intercept_001:     0.2822158609E-01
+         RMSE,MaxAE_001:     0.4896678525E-01    0.3007707664E+00
+================================================================================
+Wall-clock time (second) for this DI:            0.16
+DI done!
+
+iteration:   2
+--------------------------------------------------------------------------------
+FC starts ...
+File containing the features to be rejected: feature_space/Uspace.name
+Total number of features in the space phi00:             12
+Total number of features in the space phi01:            291
+Total number of features in the space phi02:          63866
+Total number of features in the space phi03:     4666439663
+Size of the SIS-selected subspace from phi03:         20
+Wall-clock time (second) for this FC:        38483.43
+FC done!
+
+DI starts ...
+total number of SIS-selected features from all iterations:         40
+L0 starts ...
+
+Final model/descriptor to report
+================================================================================
+  2D descriptor (model): 
+Total RMSE,MaxAE:   0.038996  0.180045
+@@@descriptor: 
+                     19:[(((f1+f5)/log(f6))+((f3*f5)/(f6-f2)))]
+                     22:[(((f2*f4))^2/((f2)^3-(f5)^3))]
+       coefficients_001:    -0.1056042182E-02    0.2306007918E-02
+          Intercept_001:    -0.2503526920E-01
+         RMSE,MaxAE_001:     0.3899591882E-01    0.1800448621E+00
+================================================================================
+Wall-clock time (second) for this DI:            0.30
+DI done!
+
+FCDI done !
+
+--------------------------------------------------------------------------------
+Total wall-clock time (second):        77073.61
+
+                                               Have a nice day !    
+
